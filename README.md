@@ -139,7 +139,7 @@ We will name the controller MainCtrl and pass in the Todo model we created and c
        .controller('MainCtrl', ['Todo', '$scope', function(Todo, $scope){
          $scope.todos = Todo.query();
        }]);
-
+```
 ----
 
 ## Notes
