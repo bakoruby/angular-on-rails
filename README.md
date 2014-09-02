@@ -72,6 +72,7 @@ To make this tutorial shorter I will link to the code you need to copy.  Copy th
 
 - [/app/views/application/index.html.erb/](https://github.com/bakoruby/angular-on-rails/blob/master/app/views/application/index.html.erb)
 - [/app/controllers/api/v1/todos_controller.rb](https://github.com/bakoruby/angular-on-rails/blob/master/app/controllers/api/v1/todos_controller.rb)
+- [/config/routes.rb](https://github.com/bakoruby/angular-on-rails/blob/master/config/routes.rb)
 
 
 
@@ -91,7 +92,7 @@ Inside of **app.js** we will define our app and load the two dependencies that w
       .module('todo-app', ['ngRoute', 'ngResource'])
 
 Now let’s add in the config for our Route Provider into **app.js**. 
-```  
+```javascript 
   .config(['$routeProvider', function($routeProvider) {
     $routeProvider.when('/', {
       controller: 'HomeCtrl'
@@ -114,8 +115,8 @@ To separate concerns inside of Angular we are going to create two new directorie
 
 We are going to use an Angular Factory to define our model, to learn more about the other two model objects visit [http://tylermcginnis.com/angularjs-factory-vs-service-vs-provider/](http://tylermcginnis.com/angularjs-factory-vs-service-vs-provider/).
 
-
-    // 'angular-todo-app/models/todo.js'
+```javascript
+    // angular-todo-app/models/todo.js
      angular
        .module('todo-app')
        .factory('Todo', function($resource) {
@@ -128,10 +129,11 @@ We are going to use an Angular Factory to define our model, to learn more about 
 
          return Todo;
        });
+```
 
 We will name the controller MainCtrl and pass in the Todo model we created and call .query(); on the model, which is included by the ngResource library.
-
-    // 'angular-todo-app/controllers/main.js'
+```javascript
+    // angular-todo-app/controllers/main.js
      angular
        .module('todo-app')
        .controller('MainCtrl', ['Todo', '$scope', function(Todo, $scope){
