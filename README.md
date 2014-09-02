@@ -70,7 +70,7 @@ Now we need to add the index action to our Application Controller
 ```
 To make this tutorial shorter I will link to the code you need to copy.  Copy the following files:
 
-- [/app/views/application/index.html.erb/](https://github.com/bakoruby/angular-on-rails/blob/master/app/views/application/index.html.erb)
+- [/app/views/application/index.html.erb](https://github.com/bakoruby/angular-on-rails/blob/master/app/views/application/index.html.erb)
 - [/app/controllers/api/v1/todos_controller.rb](https://github.com/bakoruby/angular-on-rails/blob/master/app/controllers/api/v1/todos_controller.rb)
 - [/config/routes.rb](https://github.com/bakoruby/angular-on-rails/blob/master/config/routes.rb)
 
