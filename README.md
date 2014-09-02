@@ -78,8 +78,9 @@ To make this tutorial shorter I will link to the code you need to copy.  Copy th
 
 ## Part 3 - Implementing Angular
 To bind our Angular app to the page we will add a custom directive to the body tag on our **application.html.erb**
+```html
     <body ng-app=“todo-app”>
-
+```
 
 Let’s organize our code for the Angular app under a new folder
     app/assets/angular-todo-app
